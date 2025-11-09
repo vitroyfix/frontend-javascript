@@ -53,4 +53,8 @@ function teachClass(todayClass: Subjects): string {
   if (todayClass === 'History') {
     return 'Teaching History';
   }
+  // This return is needed for the function to be valid
+  // in case of an exhaustive check, but the prompt only gives two options.
+  // We'll just return an empty string if it's neither.
+  return '';
 }

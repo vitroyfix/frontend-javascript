@@ -1,4 +1,3 @@
-// Task 9: Namespace & Declaration merging (React)
 namespace Subjects {
   export interface Teacher {
     experienceTeachingReact?: number;
@@ -10,7 +9,8 @@ namespace Subjects {
     }
 
     getAvailableTeacher(): string {
-      if (this.teacher?.experienceTeachingReact > 0) {
+      // Use standard '&&' guard instead of optional chaining
+      if (this.teacher && this.teacher.experienceTeachingReact > 0) {
         return `Available Teacher: ${this.teacher.firstName}`;
       }
       return 'No available teacher';
