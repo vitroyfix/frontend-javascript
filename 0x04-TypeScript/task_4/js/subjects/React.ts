@@ -10,6 +10,7 @@ namespace Subjects {
     }
 
     getAvailableTeacher(): string {
+      // Corrected to check experienceTeachingReact
       if (this.teacher?.experienceTeachingReact > 0) {
         return `Available Teacher: ${this.teacher.firstName}`;
       }
